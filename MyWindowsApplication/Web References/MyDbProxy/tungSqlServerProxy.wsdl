@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://www.w3.org/2001/XMLSchema" />
+      <s:element name="fSelectAndFillDataSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="query" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fSelectAndFillDataSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fSelectAndFillDataSetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fSelectAndFillDataSet2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="query" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="srcTable" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fSelectAndFillDataSet2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fSelectAndFillDataSet2Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fSelectAndFillDataSet3">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="query" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="startRecord" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="maxRecords" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="srcTable" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fSelectAndFillDataSet3Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fSelectAndFillDataSet3Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fExecuteNonQuery">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="query" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fExecuteNonQueryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="fExecuteNonQueryResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fExecuteScalar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="query" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fExecuteScalarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fExecuteScalarResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fExecuteXmlReader">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="query" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="XmlReader" abstract="true" />
+      <s:element name="fExecuteXmlReaderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fExecuteXmlReaderResult" type="tns:XmlReader" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="fSelectAndFillDataSetSoapIn">
+    <wsdl:part name="parameters" element="tns:fSelectAndFillDataSet" />
+  </wsdl:message>
+  <wsdl:message name="fSelectAndFillDataSetSoapOut">
+    <wsdl:part name="parameters" element="tns:fSelectAndFillDataSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="fSelectAndFillDataSet2SoapIn">
+    <wsdl:part name="parameters" element="tns:fSelectAndFillDataSet2" />
+  </wsdl:message>
+  <wsdl:message name="fSelectAndFillDataSet2SoapOut">
+    <wsdl:part name="parameters" element="tns:fSelectAndFillDataSet2Response" />
+  </wsdl:message>
+  <wsdl:message name="fSelectAndFillDataSet3SoapIn">
+    <wsdl:part name="parameters" element="tns:fSelectAndFillDataSet3" />
+  </wsdl:message>
+  <wsdl:message name="fSelectAndFillDataSet3SoapOut">
+    <wsdl:part name="parameters" element="tns:fSelectAndFillDataSet3Response" />
+  </wsdl:message>
+  <wsdl:message name="fExecuteNonQuerySoapIn">
+    <wsdl:part name="parameters" element="tns:fExecuteNonQuery" />
+  </wsdl:message>
+  <wsdl:message name="fExecuteNonQuerySoapOut">
+    <wsdl:part name="parameters" element="tns:fExecuteNonQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="fExecuteScalarSoapIn">
+    <wsdl:part name="parameters" element="tns:fExecuteScalar" />
+  </wsdl:message>
+  <wsdl:message name="fExecuteScalarSoapOut">
+    <wsdl:part name="parameters" element="tns:fExecuteScalarResponse" />
+  </wsdl:message>
+  <wsdl:message name="fExecuteXmlReaderSoapIn">
+    <wsdl:part name="parameters" element="tns:fExecuteXmlReader" />
+  </wsdl:message>
+  <wsdl:message name="fExecuteXmlReaderSoapOut">
+    <wsdl:part name="parameters" element="tns:fExecuteXmlReaderResponse" />
+  </wsdl:message>
+  <wsdl:portType name="tungSqlServerProxySoap">
+    <wsdl:operation name="fSelectAndFillDataSet">
+      <wsdl:input message="tns:fSelectAndFillDataSetSoapIn" />
+      <wsdl:output message="tns:fSelectAndFillDataSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fSelectAndFillDataSet2">
+      <wsdl:input message="tns:fSelectAndFillDataSet2SoapIn" />
+      <wsdl:output message="tns:fSelectAndFillDataSet2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fSelectAndFillDataSet3">
+      <wsdl:input message="tns:fSelectAndFillDataSet3SoapIn" />
+      <wsdl:output message="tns:fSelectAndFillDataSet3SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fExecuteNonQuery">
+      <wsdl:input message="tns:fExecuteNonQuerySoapIn" />
+      <wsdl:output message="tns:fExecuteNonQuerySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fExecuteScalar">
+      <wsdl:input message="tns:fExecuteScalarSoapIn" />
+      <wsdl:output message="tns:fExecuteScalarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fExecuteXmlReader">
+      <wsdl:input message="tns:fExecuteXmlReaderSoapIn" />
+      <wsdl:output message="tns:fExecuteXmlReaderSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="tungSqlServerProxySoap" type="tns:tungSqlServerProxySoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="fSelectAndFillDataSet">
+      <soap:operation soapAction="http://tempuri.org/fSelectAndFillDataSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fSelectAndFillDataSet2">
+      <soap:operation soapAction="http://tempuri.org/fSelectAndFillDataSet2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fSelectAndFillDataSet3">
+      <soap:operation soapAction="http://tempuri.org/fSelectAndFillDataSet3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fExecuteNonQuery">
+      <soap:operation soapAction="http://tempuri.org/fExecuteNonQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fExecuteScalar">
+      <soap:operation soapAction="http://tempuri.org/fExecuteScalar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fExecuteXmlReader">
+      <soap:operation soapAction="http://tempuri.org/fExecuteXmlReader" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="tungSqlServerProxy">
+    <documentation xmlns="http://schemas.xmlsoap.org/wsdl/" />
+    <wsdl:port name="tungSqlServerProxySoap" binding="tns:tungSqlServerProxySoap">
+      <soap:address location="http://localhost/MyService/tungSqlServerProxy.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

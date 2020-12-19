@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyService", "http://localhost/MyService/MyService.csproj", "{1EC6BDDF-D29F-42B4-A56D-AD863A0AC913}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyWindowsApplication", "MyWindowsApplication\MyWindowsApplication.csproj", "{CBBF543D-CE09-4690-8D18-F6CE01DCB4F0}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{1EC6BDDF-D29F-42B4-A56D-AD863A0AC913}.Debug.ActiveCfg = Debug|.NET
+		{1EC6BDDF-D29F-42B4-A56D-AD863A0AC913}.Debug.Build.0 = Debug|.NET
+		{1EC6BDDF-D29F-42B4-A56D-AD863A0AC913}.Release.ActiveCfg = Release|.NET
+		{1EC6BDDF-D29F-42B4-A56D-AD863A0AC913}.Release.Build.0 = Release|.NET
+		{CBBF543D-CE09-4690-8D18-F6CE01DCB4F0}.Debug.ActiveCfg = Debug|.NET
+		{CBBF543D-CE09-4690-8D18-F6CE01DCB4F0}.Debug.Build.0 = Debug|.NET
+		{CBBF543D-CE09-4690-8D18-F6CE01DCB4F0}.Release.ActiveCfg = Release|.NET
+		{CBBF543D-CE09-4690-8D18-F6CE01DCB4F0}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
